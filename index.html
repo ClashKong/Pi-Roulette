@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Roulette 🎰</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Pi Network SDK -->
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Pi Roulette 🎰</h1>
+
+    <!-- Login-Bereich -->
+    <button id="loginButton">Mit Pi Wallet anmelden</button>
+
+    <!-- Einsatzmöglichkeiten -->
+    <div class="game-area">
+        <p>Setze auf eine Farbe:</p>
+        <button id="betRed">Setze auf Rot 🔴</button>
+        <button id="betBlack">Setze auf Schwarz ⚫</button>
+        <p>Setze auf eine Zahl:</p>
+        <input type="number" id="betNumber" placeholder="0-36" min="0" max="36">
+        <button id="betOnNumber">Setze auf Zahl 🎯</button>
+    </div>
+
+    <!-- Ergebnisbereich -->
+    <div id="result"></div>
+
+    <button id="spinButton">🎲 Spin</button>
+</body>
+</html>
