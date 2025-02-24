@@ -1,27 +1,172 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #006600;
+    color: white;
     text-align: center;
-    margin: 20px;
+    margin: 0;
+    padding: 20px;
 }
 
-h1 {
-    color: #333;
+.roulette-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
 }
 
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+.wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        green 0deg 10deg,
+        red 10deg 20deg,
+        black 20deg 30deg,
+        red 30deg 40deg,
+        black 40deg 50deg,
+        red 50deg 60deg,
+        black 60deg 70deg,
+        red 70deg 80deg,
+        black 80deg 90deg,
+        red 90deg 100deg,
+        black 100deg 110deg,
+        red 110deg 120deg,
+        black 120deg 130deg,
+        red 130deg 140deg,
+        black 140deg 150deg,
+        red 150deg 160deg,
+        black 160deg 170deg,
+        red 170deg 180deg,
+        black 180deg 190deg,
+        red 190deg 200deg,
+        black 200deg 210deg,
+        red 210deg 220deg,
+        black 220deg 230deg,
+        red 230deg 240deg,
+        black 240deg 250deg,
+        red 250deg 260deg,
+        black 260deg 270deg,
+        red 270deg 280deg,
+        black 280deg 290deg,
+        red 290deg 300deg,
+        black 300deg 310deg,
+        red 310deg 320deg,
+        black 320deg 330deg,
+        red 330deg 340deg,
+        black 340deg 350deg,
+    );
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.number-on-wheel {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.ball {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#spinButton {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
     cursor: pointer;
-}
-
-.game-area {
-    margin: 20px;
 }
 
 #result {
     margin-top: 20px;
-    font-size: 20px;
-    color: #333;
+    font-size: 24px;
+    color: yellow;
+}
+
+.betting-area {
+    display: grid;
+    grid-template-columns: repeat(10, 80px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bet {
+    background-color: white;
+    color: black;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+.chips-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.chip {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chip.selected {
+    border: 2px solid red;
+}
+
+.placed-chip {
+    background-color: gold;
+    color: black;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    position: relative;
+    margin: 2px;
+    text-align: center;
+}
+.winner-highlight {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border: 2px solid red;
 }

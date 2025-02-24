@@ -4,35 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi Roulette 🎰</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Pi Network SDK -->
-    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
-
-    <!-- JavaScript -->
-    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Pi Roulette 🎰</h1>
+    <div class="roulette-container">
+        <div class="wheel" id="wheel">
+            <div class="ball" id="ball"></div>
+        </div>
+    </div>
+    <button id="spinButton">🎲 Spin</button>
+    <div id="result"></div>
+    <p id="balance">Kontostand: 1000</p>
 
-    <!-- Login-Bereich -->
-    <button id="loginButton">Mit Pi Wallet anmelden</button>
-
-    <!-- Einsatzmöglichkeiten -->
-    <div class="game-area">
-        <p>Setze auf eine Farbe:</p>
-        <button id="betRed">Setze auf Rot 🔴</button>
-        <button id="betBlack">Setze auf Schwarz ⚫</button>
-        <p>Setze auf eine Zahl:</p>
-        <input type="number" id="betNumber" placeholder="0-36" min="0" max="36">
-        <button id="betOnNumber">Setze auf Zahl 🎯</button>
+    <div class="betting-area">
+        <div class="bet green" data-number="0">0</div>
+        <div class="bet red" data-number="1">1</div>
+        <div class="bet black" data-number="2">2</div>
+        <div class="bet red" data-number="3">3</div>
+        <div class="bet black" data-number="4">4</div>
+        <div class="bet red" data-number="5">5</div>
+        <div class="bet black" data-number="6">6</div>
+        <div class="bet red" data-number="7">7</div>
+        <div class="bet black" data-number="8">8</div>
+        <div class="bet red" data-number="9">9</div>
+        <div class="bet black" data-number="10">10</div>
+        <div class="bet red" data-number="11">11</div>
+        <div class="bet black" data-number="12">12</div>
+        <div class="bet red" data-number="13">13</div>
+        <div class="bet black" data-number="14">14</div>
+        <div class="bet red" data-number="15">15</div>
+        <div class="bet black" data-number="16">16</div>
+        <div class="bet red" data-number="17">17</div>
+        <div class="bet black" data-number="18">18</div>
+        <div class="bet red" data-number="19">19</div>
+        <div class="bet black" data-number="20">20</div>
+        <div class="bet red" data-number="21">21</div>
+        <div class="bet black" data-number="22">22</div>
+        <div class="bet red" data-number="23">23</div>
+        <div class="bet black" data-number="24">24</div>
+        <div class="bet red" data-number="25">25</div>
+        <div class="bet black" data-number="26">26</div>
+        <div class="bet red" data-number="27">27</div>
+        <div class="bet black" data-number="28">28</div>
+        <div class="bet red" data-number="29">29</div>
+        <div class="bet black" data-number="30">30</div>
+        <div class="bet red" data-number="31">31</div>
+        <div class="bet black" data-number="32">32</div>
+        <div class="bet red" data-number="33">33</div>
+        <div class="bet black" data-number="34">34</div>
+        <div class="bet red" data-number="35">35</div>
+        <div class="bet red" data-number="36">36</div>
+    </div>
+    <div class="outside-bets">
+        <div class="outside red-bet" data-type="red">Rot</div>
+        <div class="outside black-bet" data-type="black">Schwarz</div>
+        <div class="outside even-bet" data-type="even">Gerade</div>
+        <div class="outside odd-bet" data-type="odd">Ungerade</div>
+        <div class="outside first-half-bet" data-type="1-18">1-18</div>
+        <div class="outside second-half-bet" data-type="19-36">19-36</div>
     </div>
 
-    <!-- Ergebnisbereich -->
-    <div id="result"></div>
-
-    <button id="spinButton">🎲 Spin</button>
+    <div class="chips-container">
+        <div class="chip" data-value="1">1</div>
+        <div class="chip" data-value="5">5</div>
+        <div class="chip" data-value="10">10</div>
+        <div class="chip" data-value="20">20</div>
+        <div class="chip" data-value="50">50</div>
+    </div>    
+    <script src="script.js"></script>
 </body>
 </html>
